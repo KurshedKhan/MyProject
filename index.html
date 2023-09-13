@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position and flex Property use project</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+      
+        header {
+            border: 1px solid black;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0px;
+            width: 100%;
+            height: 60px;
+            background-color: #1450A3;
+            color: white;
+            box-shadow: 3px 3px 5px black;
+        }
+
+        .header1 img {
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+        }
+
+        .header2 ul {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            list-style-type: none;
+
+        }
+
+        .header2 ul li {
+            padding: 10px;
+            border: 1px solid black;
+
+        }
+
+        .header2 ul li:hover {
+            cursor: pointer;
+            background-color: red;
+            color: white;
+            transition: all 0.3s ease;
+        }
+
+        .home {
+            background-color: red !important;
+            color: white !important;
+        }
+
+        .header2 {
+            width: 300px;
+            margin-right: 10px;
+            font-size: 15px;
+        }
+
+        .header1 {
+            width: 230px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 10px 0px;
+        }
+
+        .header1 span {
+            font-size: x-large;
+            font-weight: bold;
+        }
+
+        .main-part img {
+            height: 550px;
+            width: 100%;
+        }
+
+        .main-part {
+            height: 700px;
+
+            position: relative;
+        }
+
+        .main-part-logo {
+            border: 1px solid black;
+            border-radius: 50%;
+            height: 200px;
+            width: 200px;
+            position: absolute;
+            bottom: 50px;
+            left: 40%;
+            overflow: hidden;
+            background-color: white;
+            padding: 10px;
+
+
+        }
+
+        .main-border1 {
+            border: 1px solid black;
+        }
+
+        .main-part-logo1 {
+            border: 1px solid black;
+            border-radius: 50%;
+            height: 200px;
+            width: 200px;
+            position: absolute;
+            bottom: 50px;
+            left: 10%;
+            overflow: hidden;
+            background-color: white;
+            padding: 10px;
+
+        }
+
+        .main-part-logo2 {
+            border-radius: 50%;
+            height: 200px;
+            width: 200px;
+            position: absolute;
+            bottom: 50px;
+            right: 10%;
+            overflow: hidden;
+            background-color: white;
+            padding: 10px;
+            border: 1px solid black;
+
+        }
+
+        .main-part-logo img {
+            height: 200px;
+            width: 200px;
+        }
+
+        .main-part-logo1 img {
+            height: 200px;
+            width: 200px;
+        }
+
+        .main-part-logo2 img {
+            height: 200px;
+            width: 200px;
+        }
+
+        .span1 {
+
+            font-size: x-large;
+            font-weight: bold;
+            position: absolute;
+            left: 15%;
+            top: 95%;
+        }
+
+        .span2 {
+
+            font-size: x-large;
+            font-weight: bold;
+            position: absolute;
+            left: 45%;
+            top: 95%;
+        }
+
+        .span3 {
+
+            font-size: x-large;
+            font-weight: bold;
+            position: absolute;
+            left: 78%;
+            top: 95%;
+        }
+
+        .card-bg {
+
+            display: flex;
+            justify-content: space-around;
+            padding: 40px;
+        }
+
+        .card1 {
+            box-shadow: 3px 3px 5px black;
+
+            width: 250px;
+            height: 380px;
+            overflow: hidden;
+
+            background-color: white;
+
+        }
+
+        .card1 img {
+
+            width: 250px;
+            height: 40%;
+        }
+
+        .card1 span {
+            font-size: large;
+            font-weight: bold;
+            margin-left: 30px;
+        }
+
+        hr {
+            border: 1px solid black;
+            background-color: black;
+            margin: 7px 7px;
+        }
+
+        .iconicon1 i {
+            margin-left: 5px;
+
+        }
+
+        h3 {
+            font-size: small;
+            font-style: italic;
+            margin-top: 10px;
+            padding: 5px;
+
+        }
+
+        .icon span {
+            margin: 0px;
+        }
+
+        h1 {
+            border: 2px solid black;
+            font-size: large;
+            margin-left: 60px;
+            width: fit-content;
+            color: white;
+            background-color: rgba(248, 7, 99, 0.79);
+            padding: 5px;
+        }
+
+        .icon {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 5px;
+        }
+
+        .card2 {
+            box-shadow: 3px 3px 5px black;
+
+            width: 250px;
+            height: 380px;
+            overflow: hidden;
+
+            background-color: white;
+
+        }
+
+        .card2 img {
+
+            width: 250px;
+            height: 40%;
+        }
+
+        .card2 span {
+            font-size: large;
+            font-weight: bold;
+            margin-left: 30px;
+        }
+
+        hr {
+            border: 1px solid black;
+            background-color: black;
+            margin: 7px 7px;
+        }
+
+        .iconicon1 i {
+            margin-left: 5px;
+
+        }
+
+        h3 {
+            font-size: small;
+            font-style: italic;
+            margin-top: 10px;
+            padding: 5px;
+
+        }
+
+        .icon span {
+            margin: 0px;
+        }
+
+        h1 {
+            border: 2px solid black;
+            font-size: large;
+            margin-left: 60px;
+            width: fit-content;
+            color: white;
+            background-color: rgba(248, 7, 99, 0.79);
+            padding: 5px;
+        }
+
+        .icon {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 5px;
+        }
+
+        .card3 {
+            box-shadow: 3px 3px 5px black;
+            width: 250px;
+            height: 380px;
+            overflow: hidden;
+            background-color: white;
+
+        }
+
+        .card3 img {
+
+            width: 250px;
+            height: 40%;
+        }
+
+        .card3 span {
+            font-size: large;
+            font-weight: bold;
+            margin-left: 30px;
+        }
+
+        hr {
+            border: 1px solid black;
+            background-color: black;
+            margin: 7px 7px;
+        }
+
+        .iconicon1 i {
+            margin-left: 5px;
+
+        }
+
+        h3 {
+            font-size: small;
+            font-style: italic;
+            margin-top: 10px;
+            padding: 5px;
+
+        }
+
+        .icon span {
+            margin: 0px;
+        }
+
+        h1 {
+            border: 2px solid black;
+            font-size: large;
+            margin-left: 60px;
+            width: fit-content;
+            color: white;
+            background-color: rgba(248, 7, 99, 0.79);
+            padding: 5px;
+        }
+
+        .icon {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 5px;
+        }
+
+        .mainfooter {
+
+            display: flex;
+            justify-content: space-around;
+            background-color: #1450A3;
+        }
+
+        .ul i {
+            padding: 10px;
+            margin-left: 30px;
+
+        }
+
+        .footer1 h2 {
+            font-weight: bold;
+            margin-left: 10%;
+            padding: 10px;
+        }
+
+        .footer2 {
+
+            width: 170px;
+        }
+
+        .mainfooter2 {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: #1450A3;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <div class="main-part">
+        <img src="food2.jpg" alt="main food image all item">
+
+        <div class="main-part-logo">
+            <img src="foodlogo2.svg" alt="">
+        </div>
+        <div class="main-part-logo1">
+            <img src="foodimage1logo.svg" alt="">
+        </div>
+        <div class="main-part-logo2">
+            <img src="foodimage2 logo (1).svg" alt="">
+        </div>
+
+        <span class="span1">Indian</span>
+        <span class="span2">Spanish</span>
+        <span class="span3">Chineese</span>
+    </div>
+    <div class="card-bg">
+        <div class="card1">
+            <img src="card img.jpg" alt="card img1 indian food">
+            <span>Strawberry Wafle</span>
+            <hr>
+            <div class="icon">
+                <div class="icon1">
+                    <i class="bi bi-clock-history"></i>
+                    <span>20 <br>Minite</span>
+                </div>
+                <div class="icon2">
+                    <i class="bi bi-book"></i>
+                    <span>5 <br>ingredients</span>
+                </div>
+                <div class="icon3">
+                    <i class="bi bi-person"></i>
+                    <span>4-6 <br>serving</span>
+                </div>
+            </div>
+            <h3>
+                When spices start speaking.
+                Enjoy the food we love.
+                Try anything, imagine everything.
+                Food from the heaven.
+            </h3>
+            <h1 style="margin-top:30px ;">View Reciepe</h1>
+        </div>
+        <div class="card2">
+            <img src="cardimg2.jpg" alt="card img2 spanish food">
+            <span>Strawberry Wafle</span>
+            <hr>
+            <div class="icon">
+                <div class="icon1">
+                    <i class="bi bi-clock-history"></i>
+                    <span>20 <br>Minite</span>
+                </div>
+                <div class="icon2">
+                    <i class="bi bi-book"></i>
+                    <span>5 <br>ingredients</span>
+                </div>
+                <div class="icon3">
+                    <i class="bi bi-person"></i>
+                    <span>4-6 <br>serving</span>
+                </div>
+            </div>
+            <h3>
+                When spices start speaking.
+                Enjoy the food we love.
+                Try anything, imagine everything.
+                Food from the heaven.
+            </h3>
+            <h1 style="margin-top:30px ;">View Reciepe</h1>
+        </div>
+
+        <div class="card3">
+            <img src="cardimg3.jpg" alt="card img3 chineese food">
+            <span>Strawberry Wafle</span>
+            <hr>
+            <div class="icon">
+                <div class="icon1">
+                    <i class="bi bi-clock-history"></i>
+                    <span>20 <br>Minite</span>
+                </div>
+                <div class="icon2">
+                    <i class="bi bi-book"></i>
+                    <span>5 <br>ingredients</span>
+                </div>
+                <div class="icon3">
+                    <i class="bi bi-person"></i>
+                    <span>4-6 <br>serving</span>
+                </div>
+            </div>
+            <h3>
+                When spices start speaking.
+                Enjoy the food we love.
+                Try anything, imagine everything.
+                Food from the heaven.
+            </h3>
+            <h1 style="margin-top:30px ;">View Reciepe</h1>
+        </div>
+
+    </div>
+
+    </div>
+    <footer>
+        <div class="mainfooter">
+            <div class="footer1">
+                <div class="span">
+                    <h2 style="color: white;">Address</h2>
+                </div>
+                <div class="ul">
+                    <ul style="color:  #64CCC5;;">
+                        <i class="bi bi-geo-alt"></i><span>Location</span><br>
+                        <i class="bi bi-telephone"></i><span>Call+01 1234567890</span><br>
+                        <i class="bi bi-envelope"></i><span>mail@domain</span><br>
+                        <i class="bi bi-facebook"></i>
+                        <i class="bi bi-twitter"></i>
+                        <i class="bi bi-linkedin"></i>
+                        <i class="bi bi-instagram"></i>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer2">
+                <div style="font-weight: bold; margin-left: 30%; padding: 10px; font-size: x-large;">
+                    <span style="color: white;">Info</span>
+                </div>
+                <span style="color: #64CCC5;"> Necessary making this the first true generator on the internet. it uses a dictionary of ovr 200
+                    latin words. combined with a handful.</span>
+
+            </div>
+        </div>
+        <div class="mainfooter2">
+            <div class="links">
+                <span style="font-weight: bold;font-size: x-large;color: white;">Links</span>
+                <ul style="margin-left: 19%; padding: 10px; list-style-type: none;color: #64CCC5;">
+                    <li>Home</li>
+                    <li>About</li>
+                    <li> Services</li>
+                    <li>Conatct us</li>
+                </ul>
+            </div>
+            <div class="subscribe">
+                <span style="font-size: x-large; font-weight: bold; margin-left: 50%;color: white;">Subscribe</span><br>
+                <span style="font-size: x-large; color:#64CCC5;">Enter Email</span>
+                <hr>
+                <span style="border: 1px solid black;color: #64CCC5;">Subscribe</span>
+            </div>
+        </div>
+    </footer>
+    <header>
+        <div class="header1">
+            <img src="headerlogo.jpg" alt="website logo">
+            <span>Food Delivery</span>
+        </div>
+        <div class="header2">
+            <ul>
+                <li class="home">Home</li>
+                <li>About Us</li>
+                <li>Contact</li>
+                <li>gallery</li>
+            </ul>
+        </div>
+    </header>
+</body>
+
+</html>
